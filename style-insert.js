@@ -1,12 +1,10 @@
-$(function () {
-    $('head').append($('<link rel="stylesheet" type="text/css" href="http://r00ger.com">'));
-})
+var appendStyles = function(){
+//    $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', chrome.extension.getURL("hide-ad.css")));
+    $('head').append($('<link rel="stylesheet" type="text/css" href="https://raw2.github.com/r00ger/seasonvar-no-ad/master/hide-ad.css"/>'));
+}
 
-
-//document.getElementById('lpc').style.setProperty('display', 'none')
-//document.onload = function () {
-//    var bl = document.querySelectorAll('a[target="_blank"]');
-//    for (var i in bl) {
-//        bl[i].setAttritute('class', 'display:none;')
-//    }
-//}
+if ($('head').length) {
+    appendStyles();
+} else {
+    $(appendStyles);
+}
