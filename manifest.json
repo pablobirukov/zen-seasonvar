@@ -7,7 +7,7 @@
     ],
     "content_scripts": [
         {
-            "js": ["style-insert.js"],
+            "js": ["jquery-2.1.0.js", "style-insert.js"],
             "matches": [ "http://seasonvar.ru/*" ]
         }
     ],
