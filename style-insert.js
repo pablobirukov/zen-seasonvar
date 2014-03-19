@@ -1,6 +1,6 @@
 var appendStyles = function(){
     $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', chrome.extension.getURL("hide-ad.css")));
-//    $('head').append($('<link rel="stylesheet" type="text/css" href="https://raw2.github.com/r00ger/seasonvar-no-ad/master/hide-ad.css"/>'));
+$('object').each(function(i, o){ if ($(o).css('position') === 'fixed') $(o).hide();})
 }
 
 if ($('head').length) {
